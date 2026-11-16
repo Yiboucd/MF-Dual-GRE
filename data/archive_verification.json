@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "all_published_members_hashed": true,
+  "file_count": 9625,
+  "archive_checks": [
+    {
+      "archive": "mf-dual-gre-davis.tar.gz",
+      "members_verified": 3040,
+      "status": "PASS"
+    },
+    {
+      "archive": "mf-dual-gre-woodland.tar.gz",
+      "members_verified": 2880,
+      "status": "PASS"
+    },
+    {
+      "archive": "mf-dual-gre-vacaville.tar.gz",
+      "members_verified": 3360,
+      "status": "PASS"
+    },
+    {
+      "archive": "mf-dual-gre-geometry.tar.gz",
+      "members_verified": 345,
+      "status": "PASS"
+    },
+    {
+      "archive": "mf-dual-gre-sample.tar.gz",
+      "members_verified": 14,
+      "status": "PASS"
+    }
+  ],
+  "portable_json_no_absolute_home_paths": true,
+  "all_radio_arrays_byte_identical_to_sources": true
+}

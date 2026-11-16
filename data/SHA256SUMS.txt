@@ -1,0 +1,7 @@
+215df238f1fd13636effb9ea8ff9e28008170fd7d322da77b9aee46cd47c48e3  mf-dual-gre-davis.tar.gz
+8debad10ca133889aeb6add2a0884b20256e76dfb5f669470993b3af71a86149  mf-dual-gre-woodland.tar.gz
+8ba33d2887da62fb7d6f0efc48e70660a6285ce22b4df74d9eb146597a58b98f  mf-dual-gre-vacaville.tar.gz
+0ea12d0e06833e0a2f40fbad7fb165a17c4e1b318f21d61ca423a1ffbf6d579a  mf-dual-gre-geometry.tar.gz
+79fd5f7cd9cfae02d9fc4c21e97f4409ab6b47fd03a143e64f18d6b602dfe3e5  mf-dual-gre-sample.tar.gz
+8b6bd82c446e9fc75d2f272f90315614f6e178d6aa1da9e34618189c77fab417  mfgat-phase1-2pct-seed2026.pt
+0967751f9e7dc528e8a74c60bbd715b27c723c099de6d3761aed8f87ee4d9953  mf-dual-gre-phase2-2pct-seed2026.pt

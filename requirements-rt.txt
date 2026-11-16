@@ -1,0 +1,5 @@
+# Optional, separate environment for the released Sionna 0.19 generator API.
+# Installed versions verified on 2026-11-17; no new ray tracing was run.
+numpy==1.26.4
+tensorflow==2.15.0
+sionna==0.19.0

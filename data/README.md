@@ -33,9 +33,8 @@ python tools/inspect_example.py --all
 
 To download only one city, use `--subset full --cities Davis`. Archives can
 also be downloaded manually and extracted into a common dataset root. All
-manifest paths are relative to that root; run original implementation scripts
-with the released dataset root as their working directory, as described in
-[the code guide](../code/README.md).
+manifest paths are relative to that root. The implementation's manifest loader
+resolves these paths from the dataset location; see [the code guide](../code/README.md).
 
 ## Data and split index
 

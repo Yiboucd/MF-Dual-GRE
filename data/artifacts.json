@@ -1,0 +1,54 @@
+{
+  "release": "data-v1.0.0",
+  "artifacts": [
+    {
+      "name": "mf-dual-gre-davis.tar.gz",
+      "bytes": 521374447,
+      "sha256": "215df238f1fd13636effb9ea8ff9e28008170fd7d322da77b9aee46cd47c48e3",
+      "examples": 380,
+      "maps": 2660,
+      "url": "https://github.com/Yiboucd/MF-Dual-GRE/releases/download/data-v1.0.0/mf-dual-gre-davis.tar.gz",
+      "kind": "city",
+      "city": "Davis"
+    },
+    {
+      "name": "mf-dual-gre-woodland.tar.gz",
+      "bytes": 492791253,
+      "sha256": "8debad10ca133889aeb6add2a0884b20256e76dfb5f669470993b3af71a86149",
+      "examples": 360,
+      "maps": 2520,
+      "url": "https://github.com/Yiboucd/MF-Dual-GRE/releases/download/data-v1.0.0/mf-dual-gre-woodland.tar.gz",
+      "kind": "city",
+      "city": "Woodland"
+    },
+    {
+      "name": "mf-dual-gre-vacaville.tar.gz",
+      "bytes": 573481351,
+      "sha256": "8ba33d2887da62fb7d6f0efc48e70660a6285ce22b4df74d9eb146597a58b98f",
+      "examples": 420,
+      "maps": 2940,
+      "url": "https://github.com/Yiboucd/MF-Dual-GRE/releases/download/data-v1.0.0/mf-dual-gre-vacaville.tar.gz",
+      "kind": "city",
+      "city": "Vacaville"
+    },
+    {
+      "name": "mf-dual-gre-geometry.tar.gz",
+      "bytes": 12146690,
+      "sha256": "0ea12d0e06833e0a2f40fbad7fb165a17c4e1b318f21d61ca423a1ffbf6d579a",
+      "scene_exports": 58,
+      "url": "https://github.com/Yiboucd/MF-Dual-GRE/releases/download/data-v1.0.0/mf-dual-gre-geometry.tar.gz",
+      "kind": "geometry"
+    },
+    {
+      "name": "mf-dual-gre-sample.tar.gz",
+      "bytes": 1566850,
+      "sha256": "79fd5f7cd9cfae02d9fc4c21e97f4409ab6b47fd03a143e64f18d6b602dfe3e5",
+      "examples": 1,
+      "maps": 7,
+      "sample_key": "Woodland|xml=17|tx=14",
+      "evaluation_role": "source_disjoint_test120",
+      "url": "https://github.com/Yiboucd/MF-Dual-GRE/releases/download/data-v1.0.0/mf-dual-gre-sample.tar.gz",
+      "kind": "sample"
+    }
+  ]
+}

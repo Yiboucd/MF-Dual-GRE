@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "examples_matched_authoritative_source_audit": 1160,
+  "all_original_manifest_hashes_match": true,
+  "file_counts": {
+    "radio_map": 8120,
+    "portable_manifest": 1160,
+    "scene_xml": 58,
+    "mesh": 116,
+    "building_mask": 58,
+    "osm_extract": 58,
+    "geometry_metadata": 55
+  },
+  "evaluation_roles": {
+    "train": 820,
+    "source_disjoint_test120": 120,
+    "seen_source_new_tx_test40": 40,
+    "val": 180
+  },
+  "radio_map_source_bytes": 2129648640,
+  "source_identity_groups": 55,
+  "sample_key": "Woodland|xml=17|tx=14",
+  "sample_role": "source_disjoint_test120"
+}

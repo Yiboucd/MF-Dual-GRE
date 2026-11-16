@@ -1,0 +1,292 @@
+{
+  "syntax": {
+    "build_clean_superpixel_graphs": "PASS",
+    "build_clean_superpixel_graphs_v2": "PASS",
+    "controlled_multifrequency_protocol_v10": "PASS",
+    "controlled_multifrequency_protocol_v6": "PASS",
+    "eval_stage1_controlled_pixel_baselines_v10": "PASS",
+    "generate_clean_multifreq_batch": "PASS",
+    "generate_clean_single_tx_multifreq_example": "PASS",
+    "graph_protocol_v3": "PASS",
+    "precompute_stage1_controlled_coarse_v10": "PASS",
+    "radiomap_metrics_v9": "PASS",
+    "train_clean_superpixel_gat": "PASS",
+    "train_clean_superpixel_gat_v2": "PASS",
+    "train_stage1_controlled_v10": "PASS",
+    "train_stage1_controlled_v6": "PASS",
+    "train_stage1_label_free_v5": "PASS",
+    "train_stage1_mfgat_v7": "PASS",
+    "train_stage2_complete_cnn_baselines_v10": "PASS",
+    "train_stage2_refiner_v10": "PASS",
+    "train_stage2_refiner_v12": "PASS",
+    "load_pretrained": "PASS"
+  },
+  "imports": {
+    "build_clean_superpixel_graphs": "release/code/build_clean_superpixel_graphs.py",
+    "build_clean_superpixel_graphs_v2": "release/code/build_clean_superpixel_graphs_v2.py",
+    "controlled_multifrequency_protocol_v10": "release/code/controlled_multifrequency_protocol_v10.py",
+    "controlled_multifrequency_protocol_v6": "release/code/controlled_multifrequency_protocol_v6.py",
+    "eval_stage1_controlled_pixel_baselines_v10": "release/code/eval_stage1_controlled_pixel_baselines_v10.py",
+    "graph_protocol_v3": "release/code/graph_protocol_v3.py",
+    "precompute_stage1_controlled_coarse_v10": "release/code/precompute_stage1_controlled_coarse_v10.py",
+    "radiomap_metrics_v9": "release/code/radiomap_metrics_v9.py",
+    "train_clean_superpixel_gat": "release/code/train_clean_superpixel_gat.py",
+    "train_clean_superpixel_gat_v2": "release/code/train_clean_superpixel_gat_v2.py",
+    "train_stage1_controlled_v10": "release/code/train_stage1_controlled_v10.py",
+    "train_stage1_controlled_v6": "release/code/train_stage1_controlled_v6.py",
+    "train_stage1_label_free_v5": "release/code/train_stage1_label_free_v5.py",
+    "train_stage1_mfgat_v7": "release/code/train_stage1_mfgat_v7.py",
+    "train_stage2_complete_cnn_baselines_v10": "release/code/train_stage2_complete_cnn_baselines_v10.py",
+    "train_stage2_refiner_v10": "release/code/train_stage2_refiner_v10.py",
+    "train_stage2_refiner_v12": "release/code/train_stage2_refiner_v12.py",
+    "load_pretrained": "release/code/load_pretrained.py"
+  },
+  "cli_help": {
+    "build_clean_superpixel_graphs_v2": {
+      "exit_code": 0,
+      "usage_present": true,
+      "help_characters": 1534
+    },
+    "train_stage1_controlled_v10": {
+      "exit_code": 0,
+      "usage_present": true,
+      "help_characters": 5058
+    },
+    "precompute_stage1_controlled_coarse_v10": {
+      "exit_code": 0,
+      "usage_present": true,
+      "help_characters": 979
+    },
+    "train_stage2_refiner_v12": {
+      "exit_code": 0,
+      "usage_present": true,
+      "help_characters": 3918
+    }
+  },
+  "environment": {
+    "numpy": "1.26.4",
+    "scipy": "1.15.2",
+    "scikit-image": "0.25.2",
+    "matplotlib": "3.10.1",
+    "torch": "2.6.0",
+    "sionna": "0.19.0",
+    "tensorflow": "2.15.0"
+  },
+  "python": "3.10.18",
+  "cuda_visible_devices": "",
+  "scope": "CPU-only syntax/import/CLI-help checks; actual portable sample loading and strict checkpoint loading; no model forward, training, cache regeneration or RT",
+  "original_source_hashes_verified": 19,
+  "class_integrity": {
+    "build_clean_superpixel_graphs.py": {
+      "class_count": 0,
+      "all_class_definitions_unchanged": true
+    },
+    "build_clean_superpixel_graphs_v2.py": {
+      "class_count": 0,
+      "all_class_definitions_unchanged": true
+    },
+    "controlled_multifrequency_protocol_v10.py": {
+      "class_count": 1,
+      "all_class_definitions_unchanged": true
+    },
+    "controlled_multifrequency_protocol_v6.py": {
+      "class_count": 1,
+      "all_class_definitions_unchanged": true
+    },
+    "eval_stage1_controlled_pixel_baselines_v10.py": {
+      "class_count": 0,
+      "all_class_definitions_unchanged": true
+    },
+    "generate_clean_multifreq_batch.py": {
+      "class_count": 0,
+      "all_class_definitions_unchanged": true
+    },
+    "generate_clean_single_tx_multifreq_example.py": {
+      "class_count": 0,
+      "all_class_definitions_unchanged": true
+    },
+    "graph_protocol_v3.py": {
+      "class_count": 0,
+      "all_class_definitions_unchanged": true
+    },
+    "precompute_stage1_controlled_coarse_v10.py": {
+      "class_count": 0,
+      "all_class_definitions_unchanged": true
+    },
+    "radiomap_metrics_v9.py": {
+      "class_count": 1,
+      "all_class_definitions_unchanged": true
+    },
+    "train_clean_superpixel_gat.py": {
+      "class_count": 7,
+      "all_class_definitions_unchanged": true
+    },
+    "train_clean_superpixel_gat_v2.py": {
+      "class_count": 1,
+      "all_class_definitions_unchanged": true
+    },
+    "train_stage1_controlled_v10.py": {
+      "class_count": 8,
+      "all_class_definitions_unchanged": true
+    },
+    "train_stage1_controlled_v6.py": {
+      "class_count": 6,
+      "all_class_definitions_unchanged": true
+    },
+    "train_stage1_label_free_v5.py": {
+      "class_count": 3,
+      "all_class_definitions_unchanged": true
+    },
+    "train_stage1_mfgat_v7.py": {
+      "class_count": 10,
+      "all_class_definitions_unchanged": true
+    },
+    "train_stage2_complete_cnn_baselines_v10.py": {
+      "class_count": 7,
+      "all_class_definitions_unchanged": true
+    },
+    "train_stage2_refiner_v10.py": {
+      "class_count": 3,
+      "all_class_definitions_unchanged": true
+    },
+    "train_stage2_refiner_v12.py": {
+      "class_count": 3,
+      "all_class_definitions_unchanged": true
+    }
+  },
+  "portability_changes_only": [
+    "build_clean_superpixel_graphs.py",
+    "build_clean_superpixel_graphs_v2.py",
+    "controlled_multifrequency_protocol_v10.py",
+    "controlled_multifrequency_protocol_v6.py",
+    "graph_protocol_v3.py",
+    "generate_clean_multifreq_batch.py",
+    "generate_clean_single_tx_multifreq_example.py",
+    "train_stage2_refiner_v10.py"
+  ],
+  "release_file_hashes": {
+    "code/build_clean_superpixel_graphs.py": "ab9576da19a1997eb3e250583f4b35cb96236f407602f59a259df1f958ec4180",
+    "code/build_clean_superpixel_graphs_v2.py": "d11f1f72c5d368db775ab28f187b3675f3693abf479cdad1e7a397357f9bbf8b",
+    "code/controlled_multifrequency_protocol_v10.py": "94718842bc1e1d395223103bba2f17118a6d00cc4e0f8e81c49d368c4896bade",
+    "code/controlled_multifrequency_protocol_v6.py": "4fe05bbf8182d76ea2f7164ba27693a650b5da7cca148e02cec948b8aefa6b19",
+    "code/eval_stage1_controlled_pixel_baselines_v10.py": "6c901dedea4f1447b754128670c88a4002ee5387e77d268efdc89f629b4732c1",
+    "code/generate_clean_multifreq_batch.py": "27e23dc8e37b392134b05835873ae91a364edbcca05c447e0a99895832d43301",
+    "code/generate_clean_single_tx_multifreq_example.py": "2a63290294950b8a171de3fee046037200a83420b1058b1f3b327580d2f942aa",
+    "code/graph_protocol_v3.py": "6175f431175929598a197d24c29c9f74361761d9173df646425faebf8ab9b551",
+    "code/precompute_stage1_controlled_coarse_v10.py": "4ff535953255f644b8f6c775fb4d55232a96cac158a152c68895e2dd6cdd6cf2",
+    "code/radiomap_metrics_v9.py": "c8fc38b9b6bd58618f1542cbe1a5482af3fa9abe46d01051745df92ea7545ae1",
+    "code/train_clean_superpixel_gat.py": "89c99e40b2de302e7f17e74cbe3c5030d6910b394d63d2e13e823fd62a4988cc",
+    "code/train_clean_superpixel_gat_v2.py": "b8ce35557ab32d9df4b9443c9f92c527128633651f0c73864f654253837c5bfb",
+    "code/train_stage1_controlled_v10.py": "3c6d90963972acf41f9c05f85a9c2315537d0de477b612df8a186fab6231b9d4",
+    "code/train_stage1_controlled_v6.py": "d0230d7c4db9944e671d337c6ad29c657eef6085d57f1d25eaf6d65a7ab70bc4",
+    "code/train_stage1_label_free_v5.py": "1dd1e93722dfd289c197c71bb3bd3ce3d80e3a60fb5b56ed496f327a336a28fc",
+    "code/train_stage1_mfgat_v7.py": "25461967d44a102253cfe73064f171b876b147380c3f04d170e257cbd87747ad",
+    "code/train_stage2_complete_cnn_baselines_v10.py": "c7bc3a239aba60b8157a5b980533ca6f90971c88b6489224146228a5820fcf8f",
+    "code/train_stage2_refiner_v10.py": "6cece7d2c8208ef91d903408b2c7664c76f9b4657c9aff3b2c0e62ced62e532c",
+    "code/train_stage2_refiner_v12.py": "6e87749ee1df73096c1e46282ff70bc4a63c978467bfe21ae2623622554d2060",
+    "code/load_pretrained.py": "a1560f1bed547a74fc65b65cdf61bfaab2430ec6e75da0d65fe681ebd8e62bf6"
+  },
+  "actual_portable_sample_smoke": {
+    "status": "PASS",
+    "manifest": "Woodland/xml_017_e6d6fb63/tx_014_x204.0_y424.0_h50_tilt0/manifest.json",
+    "release_path_base": "dataset_root",
+    "all_paths_resolved_under_dataset_root": true,
+    "maps_shape": [
+      256,
+      256,
+      7
+    ],
+    "maps_dtype": "float32",
+    "all_finite": true,
+    "geometry_mask_path": "geometry/Woodland/xml_017_e6d6fb63/B_FOOTPRINT_GEOM_1024m_4m.npy",
+    "geometry_mask_shape": [
+      256,
+      256
+    ],
+    "geometry_mask_array_exact": true,
+    "seven_original_map_sha_and_value_checks": [
+      {
+        "frequency_ghz": 2.4,
+        "path": "Woodland/xml_017_e6d6fb63/tx_014_x204.0_y424.0_h50_tilt0/txx_204.0_y_424.0_h50_f2.40G_tilt0_with_building.npy",
+        "sha256": "5d4765935a9f26abe841ad23386a130be9ef3409773da3babbb98e6ad275f5a0",
+        "hash_matches_manifest": true,
+        "loader_values_exact": true
+      },
+      {
+        "frequency_ghz": 3.65,
+        "path": "Woodland/xml_017_e6d6fb63/tx_014_x204.0_y424.0_h50_tilt0/txx_204.0_y_424.0_h50_f3.65G_tilt0_with_building.npy",
+        "sha256": "ff6da9fdb4966023c68e7b5293a04d2e416e8b843d14787d042180fb8f0b91b6",
+        "hash_matches_manifest": true,
+        "loader_values_exact": true
+      },
+      {
+        "frequency_ghz": 4.9,
+        "path": "Woodland/xml_017_e6d6fb63/tx_014_x204.0_y424.0_h50_tilt0/txx_204.0_y_424.0_h50_f4.90G_tilt0_with_building.npy",
+        "sha256": "a9f16e19e25ce1014d119236a9b5806184cf692e3619cb58a7464cf0b26486b8",
+        "hash_matches_manifest": true,
+        "loader_values_exact": true
+      },
+      {
+        "frequency_ghz": 5.8,
+        "path": "Woodland/xml_017_e6d6fb63/tx_014_x204.0_y424.0_h50_tilt0/txx_204.0_y_424.0_h50_f5.80G_tilt0_with_building.npy",
+        "sha256": "675f02facd30181fc520f75bf9f44ab195a13c825091bcb6244161e7b8a7ab35",
+        "hash_matches_manifest": true,
+        "loader_values_exact": true
+      },
+      {
+        "frequency_ghz": 24.0,
+        "path": "Woodland/xml_017_e6d6fb63/tx_014_x204.0_y424.0_h50_tilt0/txx_204.0_y_424.0_h50_f24.00G_tilt0_with_building.npy",
+        "sha256": "a3b738b05e48fcabe5452660bc6489310eab848530528f16cede1dcf6d6b56e4",
+        "hash_matches_manifest": true,
+        "loader_values_exact": true
+      },
+      {
+        "frequency_ghz": 28.0,
+        "path": "Woodland/xml_017_e6d6fb63/tx_014_x204.0_y424.0_h50_tilt0/txx_204.0_y_424.0_h50_f28.00G_tilt0_with_building.npy",
+        "sha256": "3784034a71a61c865267af4f81f2aec1d6d4d41b1168a68e6d89a899d8015bbb",
+        "hash_matches_manifest": true,
+        "loader_values_exact": true
+      },
+      {
+        "frequency_ghz": 39.0,
+        "path": "Woodland/xml_017_e6d6fb63/tx_014_x204.0_y424.0_h50_tilt0/txx_204.0_y_424.0_h50_f39.00G_tilt0_with_building.npy",
+        "sha256": "0f85c72bbba845da3be403da35f9b4f1eb6a2a44f8cd82d8837dd082c45517d8",
+        "hash_matches_manifest": true,
+        "loader_values_exact": true
+      }
+    ],
+    "phase2_normalization_and_band_order_bit_exact_to_original_formula": true,
+    "scope": "One actual released primary120 example; CPU data loading only; no model inference/training/RT; no remote files written"
+  },
+  "released_checkpoint_cpu_loads": {
+    "1": {
+      "checkpoint_sha256": "8b6bd82c446e9fc75d2f272f90315614f6e178d6aa1da9e34618189c77fab417",
+      "bytes": 2764898,
+      "strict_state_dict_load": "PASS",
+      "model_type": "AnchorPreservingMFGAT",
+      "parameters": 683223,
+      "state_tensors": 88,
+      "eval_mode": true,
+      "device": "cpu",
+      "config_sha256": "fb1ae935b4aa7d7925ceee78e00fe7e2a17dd90857003aced60b2264cfde114c"
+    },
+    "2": {
+      "checkpoint_sha256": "0967751f9e7dc528e8a74c60bbd715b27c723c099de6d3761aed8f87ee4d9953",
+      "bytes": 19745826,
+      "strict_state_dict_load": "PASS",
+      "model_type": "AuxAdapter",
+      "parameters": 4930201,
+      "state_tensors": 83,
+      "eval_mode": true,
+      "device": "cpu",
+      "config_sha256": "1cfb4df2ab8857b5f6d61f26dd6a26e57b1d4731164f535f29d735df4132857f"
+    },
+    "scope": "CPU-only strict loading of both original checkpoint files using released architecture configs and source; no model forward, training, cache regeneration or RT"
+  },
+  "document_hashes": {
+    "code/README.md": "4e5981b69a03718cdafec4a47a8fa773b59e053e78b8f7224578ac53c8ccec49",
+    "requirements-code.txt": "0cb4774034097b28d3cfe6798ec795c60368c4e7fbf0d52a6fc2c1ca1c1e5f1e",
+    "requirements-rt.txt": "144a41fc6589a8f6896d64e56cd36494986cbf8c231ec862a1d3a617832a51b1",
+    "provenance/code_sources.csv": "5454dc56a455dafcfa38a7a07103408da3bf09515b5a7772fc11213ba6fe74b4"
+  }
+}

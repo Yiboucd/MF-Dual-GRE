@@ -1,0 +1,27 @@
+{
+  "release": "data-v1.0.0",
+  "checkpoints": [
+    {
+      "name": "mfgat-phase1-2pct-seed2026.pt",
+      "phase": 1,
+      "per_band_observation_percent": 2,
+      "model_seed": 2026,
+      "sha256": "8b6bd82c446e9fc75d2f272f90315614f6e178d6aa1da9e34618189c77fab417",
+      "bytes": 2764898,
+      "url": "https://github.com/Yiboucd/MF-Dual-GRE/releases/download/data-v1.0.0/mfgat-phase1-2pct-seed2026.pt",
+      "config": "data/model_config_phase1_2pct.json",
+      "config_sha256": "fb1ae935b4aa7d7925ceee78e00fe7e2a17dd90857003aced60b2264cfde114c"
+    },
+    {
+      "name": "mf-dual-gre-phase2-2pct-seed2026.pt",
+      "phase": 2,
+      "per_band_observation_percent": 2,
+      "model_seed": 2026,
+      "sha256": "0967751f9e7dc528e8a74c60bbd715b27c723c099de6d3761aed8f87ee4d9953",
+      "bytes": 19745826,
+      "url": "https://github.com/Yiboucd/MF-Dual-GRE/releases/download/data-v1.0.0/mf-dual-gre-phase2-2pct-seed2026.pt",
+      "config": "data/model_config_phase2_2pct.json",
+      "config_sha256": "1cfb4df2ab8857b5f6d61f26dd6a26e57b1d4731164f535f29d735df4132857f"
+    }
+  ]
+}

@@ -54,6 +54,8 @@ python tools/inspect_example.py --all
 See the [data guide](data/README.md) for layout, loading, split identities and
 license attribution. See the [implementation guide](code/README.md) for graph
 construction, sparse-supervised training, optional refinement and code provenance.
+Two [original checkpoints at 2% per-band observations](data/CHECKPOINTS.md) are
+provided as separate release assets.
 
 ## Experimental protocol
 

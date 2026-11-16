@@ -1,0 +1,8 @@
+# Dependency versions used for CPU import/CLI validation on 2026-11-17.
+# This is a supported source-check environment, not a recovered historical lock.
+# Python 3.10 was checked. Install a platform-appropriate PyTorch build if needed.
+numpy==1.26.4
+scipy==1.15.2
+scikit-image==0.25.2
+matplotlib==3.10.1
+torch==2.6.0
