@@ -268,7 +268,7 @@
       "state_tensors": 88,
       "eval_mode": true,
       "device": "cpu",
-      "config_sha256": "fb1ae935b4aa7d7925ceee78e00fe7e2a17dd90857003aced60b2264cfde114c"
+      "config_sha256": "a3de7c38d035af05e171ee003a02df562d7a49bf3553cae575108cc2128a0b16"
     },
     "2": {
       "checkpoint_sha256": "0967751f9e7dc528e8a74c60bbd715b27c723c099de6d3761aed8f87ee4d9953",
@@ -279,7 +279,7 @@
       "state_tensors": 83,
       "eval_mode": true,
       "device": "cpu",
-      "config_sha256": "1cfb4df2ab8857b5f6d61f26dd6a26e57b1d4731164f535f29d735df4132857f"
+      "config_sha256": "671dab98f388c9e4d5f2f57b68f90c9209d682484236cea6230e97758a3e03aa"
     },
     "scope": "CPU-only strict loading of both original checkpoint files using released architecture configs and source; no model forward, training, cache regeneration or RT"
   },
@@ -288,5 +288,6 @@
     "requirements-code.txt": "0cb4774034097b28d3cfe6798ec795c60368c4e7fbf0d52a6fc2c1ca1c1e5f1e",
     "requirements-rt.txt": "144a41fc6589a8f6896d64e56cd36494986cbf8c231ec862a1d3a617832a51b1",
     "provenance/code_sources.csv": "5454dc56a455dafcfa38a7a07103408da3bf09515b5a7772fc11213ba6fe74b4"
-  }
+  },
+  "release_text_line_endings": "LF; configuration JSON values are unchanged by normalization"
 }
