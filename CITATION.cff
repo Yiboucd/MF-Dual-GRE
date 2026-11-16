@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this dataset or implementation, please cite this repository."
+title: "MF-Dual-GRE: Multi-Band Radio Map Dataset and Implementation"
+type: software
+authors:
+  - family-names: Ma
+    given-names: Yibo
+  - family-names: Zhang
+    given-names: Songyang
+  - family-names: Zhou
+    given-names: Yueling
+  - family-names: Ding
+    given-names: Zhi
+version: 1.0.0
+date-released: 2026-11-17
+url: "https://github.com/Yiboucd/MF-Dual-GRE"
+repository-code: "https://github.com/Yiboucd/MF-Dual-GRE"

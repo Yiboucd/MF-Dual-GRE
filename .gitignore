@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+data/dataset/
+data/downloads/
+*.tar.gz
+*.pt
+*.pth
+*.npz
+*.npy
+outputs/
+checkpoints/
+wandb/
+.env
+.env.*
