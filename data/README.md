@@ -103,3 +103,9 @@ evaluates the existing 4% and 8% MFGAT checkpoints with both input rates at
 3,000 requested regions, using the 120 primary test examples and five masks.
 The directory includes raw grouped SSE/counts, sampling statistics, and the
 verified evaluation protocol.
+
+The [asymmetric sampling group results](diagnostics/asymmetric_groups_20261118)
+report all-band, sub-6, and mmWave holdout-pixel RMSE for both observation
+allocations on the 120 primary examples and five masks. These statistics are
+reaggregated from the existing predictions; the directory includes per-mask
+SSE/counts, group means, and the evaluation protocol.

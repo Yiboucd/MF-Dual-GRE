@@ -1,0 +1,71 @@
+{
+  "purpose": "Group-level reaggregation of the existing asymmetric sampling evaluation, without retraining or new inference.",
+  "cohort": "120 primary source-disjoint test examples; data/source_disjoint_test120.csv",
+  "primary_index_sha256": "14c339e68ce0e284ca8aa238459634e816128f60b3046f0c6351ae63e68e0342",
+  "frequency_groups_GHz": {
+    "sub6": [
+      2.4,
+      3.65,
+      4.9,
+      5.8
+    ],
+    "mmwave": [
+      24,
+      28,
+      39
+    ]
+  },
+  "allocations_percent": {
+    "sub6dense": [
+      4,
+      4,
+      4,
+      4,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "mmdense": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      4,
+      4,
+      4
+    ]
+  },
+  "overall_rates_percent": {
+    "sub6dense": 2.5,
+    "mmdense": 2.0
+  },
+  "evaluation_mask_seeds": [
+    4101,
+    4102,
+    4103,
+    4104,
+    4105
+  ],
+  "metric": "Holdout-pixel RMSE in dB; pool SSE and pixel counts within a mask and group, take square root, then average the five mask RMSEs.",
+  "scored_pixels_per_mask": {
+    "all": 9946300,
+    "sub6": 5683600,
+    "mmwave": 4262700
+  },
+  "mfgat_requested_regions": 8000,
+  "model_checkpoints_sha256": {
+    "sub6dense": "8a971e498684faecc4c3261edfda9647552213952dc8d0c5c598f4164b8c64b7",
+    "mmdense": "b7e1fbaf1d787ef5b62e376e7c1a4cbdd211e1ba9478c97e9278002a41630689"
+  },
+  "original_counter_sha256": {
+    "mfgat_per_scene_tx_band_mask_rate_counters.csv": "10a9aaacfbeae9239771d4b9c71cebf0764224a4e5829cf1309cf893ee2df37c",
+    "native_raw_rows.csv": "6b7fa03dfde42ace7460a827fbcbf55bbd0bf661bd10a391e354e2e291762fb0"
+  },
+  "verification": "Independent raw-counter filtering and per-band aggregate reaggregation agree within 8.9e-16 dB. All ten original all-band table cells reproduce at three decimals.",
+  "interpretation": "Allocations have unequal total budgets and separate trained MFGAT checkpoints. Group errors describe reconstruction performance, not an isolated causal transfer effect.",
+  "csv_serialization": "UTF-8 with LF line endings.",
+  "files_sha256": {
+    "group_per_mask.csv": "7ba1733ab756cd9a8a08bd7076ff74a22bd059d41a262ea95447f69a8e560c8c",
+    "group_summary.csv": "f8dcd756a1ca9965ba8708fd3f379066d12c3406d7c457ffa7ff32d7d961869c"
+  }
+}
