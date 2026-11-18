@@ -4,12 +4,32 @@
   "requested_regions": 3000,
   "observation_rate_percent_per_band": 0.1,
   "training": {
+    "training_graphs": 820,
+    "batch_size": 1,
+    "query_resampling": "A query-hiding mask is resampled for each training-graph visit.",
     "epoch_limit": 40,
     "selected_epoch": 40,
     "selection_metric": "RMSE at the reserved measurement pixels in validation scenes"
   },
   "provenance": {
     "metrics_sha256": "ce016226d65909678a568364de7e842b18e3a3772dcfa7008f20a5bee2012ead",
-    "checkpoint_sha256": "85bd1d45f298d34b4559485632a1b24065bb06696a96a4da2ff86021a6fd9dd3"
+    "checkpoint_sha256": "85bd1d45f298d34b4559485632a1b24065bb06696a96a4da2ff86021a6fd9dd3",
+    "accounting_implementation": "code/train_stage1_controlled_v10.py",
+    "accounting_implementation_sha256_lf": "3c6d90963972acf41f9c05f85a9c2315537d0de477b612df8a186fab6231b9d4"
+  },
+  "derived_work_accounting": {
+    "epoch_definition": "One complete traversal of all 820 training graphs.",
+    "optimizer_steps_per_epoch": 820,
+    "optimizer_steps_at_epoch_limit": 32800,
+    "optimizer_steps_at_selected_epoch": 32800,
+    "calculation_basis": "Derived from the stored run arguments and the archived training loop; not a historical optimizer-step trace.",
+    "optimizer_steps_per_graph_visit": 1
+  },
+  "forward_work_per_graph": {
+    "predicted_target_carriers": 7,
+    "source_policy": "target_nearest",
+    "source_choices_per_target": 2,
+    "source_target_pair_network_evaluations": 14,
+    "optimizer_updates": 1
   }
 }

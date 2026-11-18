@@ -84,6 +84,16 @@ and source building masks are distributed in the geometry archive.
 See [DATA_LICENSE.md](../DATA_LICENSE.md) for ODbL licensing and
 **© OpenStreetMap contributors** attribution.
 
-The [regional RadioGAT training record](radiogat_regional_0p1_training_record.json)
-preserves the configured epoch limit and selected epoch for the archived
-0.1% regional run.
+For the Phase-1 configurations below, one epoch is one pass over all 820
+training graphs, with query masks resampled at each graph visit. With batch
+size one and one optimizer update per graph, this is 820 optimizer updates
+per epoch.
+
+| Recorded configuration | Maximum optimizer updates |
+| --- | ---: |
+| [MFGAT, published 2% configuration](model_config_phase1_2pct.json) | 73,800 |
+| [Regional RadioGAT, archived 0.1% run](radiogat_regional_0p1_training_record.json) | 32,800 |
+
+These counts are derived from the stored arguments and released training
+loop. Within each RadioGAT update, 14 source-target network evaluations are
+combined into a single backward pass and optimizer step.
