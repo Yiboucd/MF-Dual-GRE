@@ -1,0 +1,7 @@
+input_rate,stable_group,measured_region_carrier_mask_entries,mean_measurements_per_observed_pair,single_measurement_fraction,samplemean_holdout_pixel_rmse_db_pooled,samplemean_regional_mean_error_rmse_db_pooled
+4,already_measured_at_4,6864279,1.4488921560443566,0.6552472590347799,3.449096439713747,2.622285653633056
+4,newly_measured_at_8,0,,,,
+4,still_unmeasured_at_8,0,,,,
+8,already_measured_at_4,6864279,2.2431127872279086,0.29622033137056347,3.211865340038246,2.3013462932254884
+8,newly_measured_at_8,3106554,1.4472460481935934,0.6561115628442319,3.4040695360713906,2.5904177127019077
+8,still_unmeasured_at_8,0,,,,

@@ -1,0 +1,81 @@
+{
+  "purpose": "Frozen-checkpoint cross-rate diagnostic for the regional-resolution sweep",
+  "model": "MFGAT",
+  "requested_regions": 3000,
+  "primary_test_examples": 120,
+  "primary_cohort_index": "data/source_disjoint_test120.csv",
+  "carrier_frequencies_GHz": [
+    2.4,
+    3.65,
+    4.9,
+    5.8,
+    24,
+    28,
+    39
+  ],
+  "model_training_rates_percent": [
+    4,
+    8
+  ],
+  "input_observation_rates_percent": [
+    4,
+    8
+  ],
+  "model_seed": 2026,
+  "evaluation_mask_seeds": [
+    4101,
+    4102,
+    4103,
+    4104,
+    4105
+  ],
+  "holdout_percent": 20,
+  "holdout_seed": 9001,
+  "scored_pixel_carrier_entries_per_mask": 9946300,
+  "sampling": "Independent across carriers; nested across rates at each example and mask seed.",
+  "aggregation": "Pixel SSE is pooled within each mask, then the five mask RMSEs are averaged. Stable-group files explicitly distinguish pooled RMSE and mean per-mask RMSE.",
+  "stable_groups": {
+    "already_measured_at_4": "Own-carrier regional measurement present at 4% and 8%.",
+    "newly_measured_at_8": "No own-carrier regional measurement at 4%; present at 8%.",
+    "still_unmeasured_at_8": "No own-carrier regional measurement at either rate."
+  },
+  "sampling_denominator": "Measurement histograms count region-carrier-mask entries over the valid domain, including entries without holdout pixels; they are not pixel-weighted.",
+  "newly_observed_single_measurement_count": 2038246,
+  "newly_observed_pair_count": 3106554,
+  "newly_observed_single_measurement_fraction": 0.6561115628442319,
+  "training_performed": false,
+  "original_sweep_results_modified": false,
+  "pre_softupdate": "Recovered algebraically at the same frozen weights from the final regional blend (rho=0.25); this is not a retrained ablation.",
+  "data_invariance_checks": [
+    "Identical graph paths, edge indices, static geometry features, labels, and building masks across input rates.",
+    "Identical holdout targets, weights, and within-region squared errors across input rates and evaluation masks.",
+    "Nested pixel observation sets and nondecreasing regional observation counts across input rates."
+  ],
+  "checkpoint_sha256": {
+    "trained_4pct": "5f67966c5b1c33119a804e352311e9674e25bdfcc0be354bb4f5a9feba83a292",
+    "trained_8pct": "bcdeef84c11cfb7b697758626c51eee368cba7a02d6e479f86f4645690e8215a"
+  },
+  "source_sha256_lf": {
+    "train_stage1_controlled_v10.py": "3c6d90963972acf41f9c05f85a9c2315537d0de477b612df8a186fab6231b9d4",
+    "controlled_multifrequency_protocol_v10.py": "222773f0c77299a299110631b11fb4d0976310585366c98ef8afe4c357271b99",
+    "train_stage1_mfgat_v7.py": "25461967d44a102253cfe73064f171b876b147380c3f04d170e257cbd87747ad"
+  },
+  "scope": "Two single-seed checkpoints at one requested region count. Fixed-checkpoint input interventions do not uniquely isolate encoder, self-anchor, or other anchor effects. Between-checkpoint differences cannot separate training-rate effects from fit variability.",
+  "files_sha256": {
+    "summary.csv": "7cf944ef05b96c5fd3fe25f2b6c4f240f11c33b0672284c3468d4fe1c4ebe337",
+    "per_mask_cells.csv": "39cfae2e72a02627dc668929bf0553399136161a196dda83295e5b11664eb9ad",
+    "stable_groups.csv": "729e70a7a97954739ea41786ad94f328177ab369ef1408f5f95a489c5b3faefd",
+    "stable_group_summary.csv": "4d929245c921687c1ae195563b6b1aad9322531495cf8807a662145c5c01c073",
+    "stable_group_input_effects.csv": "71b60ed73a248da321160e8416d5b2a92a89a88ff2f6992560a4157754dc9e22",
+    "sampling_group_stats.csv": "035d1f28d82910f24129f81163cbafe244b308d4062af1da9d0a6bac4c5020ec",
+    "sampling_group_summary.csv": "8b1d01dcdbf9eb9a42ba783ace4821fc0df55f5fdbd35c888877c95cff614abf",
+    "diagonal_regression.csv": "ee3b5776807407fd6b04a27c6b2a2a83652bdc433a4a6458baa12836d3263ef8"
+  },
+  "reference_clip_db": [
+    -120,
+    -80
+  ],
+  "phase1_output": "One constant predicted value per region and carrier, scored at heldout pixels.",
+  "maximum_per_mask_diagonal_absolute_difference_db": 1.0005491990483506e-08,
+  "verification": "Recomputed all four five-mask mean RMSEs, scoring counts, stable-group directions, the single-measurement fraction, and all pre-update versus final-score comparisons from the released CSV files."
+}

@@ -97,3 +97,9 @@ per epoch.
 These counts are derived from the stored arguments and released training
 loop. Within each RadioGAT update, 14 source-target network evaluations are
 combined into a single backward pass and optimizer step.
+
+The [frozen cross-rate diagnostic](diagnostics/vc_s3000_crossrate_20261118)
+evaluates the existing 4% and 8% MFGAT checkpoints with both input rates at
+3,000 requested regions, using the 120 primary test examples and five masks.
+The directory includes raw grouped SSE/counts, sampling statistics, and the
+verified evaluation protocol.
