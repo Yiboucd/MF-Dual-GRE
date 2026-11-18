@@ -109,3 +109,12 @@ report all-band, sub-6, and mmWave holdout-pixel RMSE for both observation
 allocations on the 120 primary examples and five masks. These statistics are
 reaggregated from the existing predictions; the directory includes per-mask
 SSE/counts, group means, and the evaluation protocol.
+
+The [direct-output prior-input control](diagnostics/phase2_prior_input_20261118)
+archives the paired 2% comparison and its per-mask and per-source statistics.
+These internal controls use direct sigmoid heads; the main refiner uses a
+residual output head.
+
+The [single-example inference benchmark](diagnostics/phase2_inference_timing_20261118)
+archives all 300 timing repetitions for the two-stage system, cached-prior
+refiner, and U-Net, together with model hashes and measurement boundaries.

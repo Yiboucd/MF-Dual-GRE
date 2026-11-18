@@ -1,0 +1,7 @@
+cohort,city,xml_idx,no_minus_with_mask_mean_source_rmse_db
+source_disjoint_test120,Davis,9,0.03191312222720755
+source_disjoint_test120,Vacaville,1,0.03237572976459888
+source_disjoint_test120,Vacaville,7,0.033393154780378034
+source_disjoint_test120,Vacaville,10,0.032420422569606575
+source_disjoint_test120,Woodland,1,0.01936821383627705
+source_disjoint_test120,Woodland,17,0.02260734796033468

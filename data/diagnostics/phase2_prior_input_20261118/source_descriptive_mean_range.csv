@@ -1,0 +1,2 @@
+cohort,source_count,equal_source_mean_no_minus_with_db,min_source_no_minus_with_db,max_source_no_minus_with_db,positive_source_count,negative_source_count,global_mask_mean_pooled_no_minus_with_db,estimand_note
+source_disjoint_test120,6,0.028679665189733795,0.01936821383627705,0.033393154780378034,6,0,0.028425598355777782,Equal-source descriptive mean/range is distinct from pixel-pooled global margin; no population significance claim.

@@ -1,0 +1,98 @@
+{
+  "experiment": "Paired Phase-2 prior-input control; preserved internal diagnostic, not the main residual-output system.",
+  "phase1_prior_requested_superpixels": 8000,
+  "per_band_observation_rate_percent": 2,
+  "carrier_frequencies_GHz": [
+    2.4,
+    3.65,
+    4.9,
+    5.8,
+    24,
+    28,
+    39
+  ],
+  "modes": {
+    "with_prior": "Supply the frozen Phase-1 estimates through own-band and shared all-band prior inputs.",
+    "no_prior": "Zero both prior input routes during training and evaluation."
+  },
+  "shared_inputs": "Original sparse maps, sampling masks, geometry/TX context, and hard observation consistency.",
+  "control_output_rule": "Direct sigmoid prediction in both arms, without the learned-prior residual output skip and its seven residual-scale parameters.",
+  "main_system_difference": "The manuscript main Phase-2 model uses residual corrections to a learned prior. This control changes that output rule; its scores are not the formal residual-refiner scores.",
+  "parameter_count_each_control": 4930194,
+  "paired_training_seed": 2026,
+  "training_seed_pairs": 1,
+  "shared_initialization": true,
+  "shared_batch_order_and_spatial_augmentation": true,
+  "training_epochs": 100,
+  "training_validation_counts": [
+    820,
+    180
+  ],
+  "checkpoint_selection": "Minimum FP32 dense validation-source-scene unobserved-pixel RMSE, independently for each arm; no test evaluation during training.",
+  "original_test_split_examples": 160,
+  "published_evaluation_cohort": "source_disjoint_test120",
+  "published_evaluation_examples": 120,
+  "published_source_count": 6,
+  "cohort_index": "data/source_disjoint_test120.csv",
+  "cohort_index_sha256": "14c339e68ce0e284ca8aa238459634e816128f60b3046f0c6351ae63e68e0342",
+  "evaluation_mask_seeds": [
+    4101,
+    4102,
+    4103,
+    4104,
+    4105
+  ],
+  "scored_pixel_carrier_entries_each_mask": 9946300,
+  "score_source": "Exported FP64 SSE of locked FP32 predictions.",
+  "metric_aggregation": "For each arm and mask, pool pixel SSE and pixel counts over all seven bands and the 120 primary examples, take sqrt(SSE/count), then average the five mask RMSEs.",
+  "mask_variation": "Five observation masks reuse one fitted model per arm; they are not independently trained model replicates.",
+  "source_summary": "Equal-source means and ranges are descriptive and differ from the globally pixel-pooled difference. Six sources are not independent model-training replications; no population significance claim is made.",
+  "verified_global_rmse_db": {
+    "with_prior": 1.4621119910917406,
+    "no_prior": 1.4905375894475184
+  },
+  "verified_no_prior_minus_with_prior_db": 0.028425598355777737,
+  "verified_equal_source_mean_difference_db": 0.028679665189733795,
+  "interpretation": "This paired input intervention describes the effect of prior inputs in the direct-output control. It does not decompose accuracy into dense-supervision, refiner, or Phase-1 contributions and does not establish that the prior is necessary.",
+  "completed_run_records": {
+    "with_prior": {
+      "training_manifest_sha256": "3dd24ca9ac5484c99a62e0971fda64740e1968c9019bd90926de918198190f97",
+      "completed_summary_sha256": "3167655e78866268af9f9e229317b96c217cbcbb248a345ae4e0158ff70fa0ad",
+      "checkpoint_sha256_recorded_in_completed_summary": "35507f24b2b9292e424ef1be369bbbc85ef3878f0f4883bf2b64a095123b49b3",
+      "checkpoint_parameter_sha256_recorded_in_completed_summary": "3c43d5ae3ede41bb40ad28435da306c11b3214f98eb4a691d91af8b2e0c2c9f3",
+      "best_epoch": 99,
+      "best_validation_unseen_rmse_db": 1.6787781063085943,
+      "epochs_completed": 100,
+      "initial_parameter_sha256": "3e5bd6084a1817b53b990fcd2d19b520883d6d3f93b5950e9414b07088b8886f"
+    },
+    "no_prior": {
+      "training_manifest_sha256": "7b77034d2807b58b4cfc6f4c69bb7a7030f993e5e32b102d64200a28878aaf58",
+      "completed_summary_sha256": "120f7ad0aa5ecab26dbf54984743e8811e8f8262302f4081b441ec48c87e3272",
+      "checkpoint_sha256_recorded_in_completed_summary": "a394bd0cb33c7b591310a99e3fa7bae3682d70e3f389566b7a7e6fd65c2721ab",
+      "checkpoint_parameter_sha256_recorded_in_completed_summary": "5bc1f7748b719ab48bc88daef28e47edd52506b66c0ae02669a275394c922e43",
+      "best_epoch": 95,
+      "best_validation_unseen_rmse_db": 1.7047326659306319,
+      "epochs_completed": 100,
+      "initial_parameter_sha256": "3e5bd6084a1817b53b990fcd2d19b520883d6d3f93b5950e9414b07088b8886f"
+    }
+  },
+  "original_source_csv_sha256": {
+    "mean_over_five_masks.csv": "c43ba0ad92a7edd3b5461b4ab86f0378624aef6a4025cd93a739e3a9f0725145",
+    "per_mask_mode_counters.csv": "dffa40391c2d2bf962c6469f1e066a2cf9f0ae9a5f64f3518855c971966207c4",
+    "per_source_mask_mean_effects.csv": "e0096023588f4acc239753579f5cbb9a7319c6bbfba301af09459dddf298f817",
+    "source_descriptive_mean_range.csv": "39334618968b2cd39f6ecc8ef4c07a7df7590deef0226ebffcc69e5450f72916"
+  },
+  "independent_analysis_sha256": "16cd009c66f84cf7ebb516d38900773695147431a4c4e4841a11f8b0ad98ea2b",
+  "control_implementation_sha256": {
+    "matched_prior_model.py": "b2e70788914d28338190dbba3928387053f65fe051afde505d44dc9c9a69d7da",
+    "run_matched_prior.py": "15ec734bdb27d99559305cc4d9078898fce9a329b608da5727c41d7c5dea610e"
+  },
+  "csv_serialization": "UTF-8 with LF line endings. Original field names and primary-cohort row values are preserved exactly.",
+  "files_sha256": {
+    "mean_over_five_masks.csv": "84dfa350821ef3200ac5327e0ddcdd8441e8a73f05cd3364a83e9f03c5b12317",
+    "per_mask_mode_counters.csv": "9aa56be956c9b24b0f9532ed85ecb0dc1ee83a6e99126b3e770e4a0dc2ec68b1",
+    "per_source_mask_mean_effects.csv": "030d2432a4965ed2d9cf18ac0cc2c38bb8729bd8494b39acd908877686c06136",
+    "source_descriptive_mean_range.csv": "1a0860a428161c83da331ead526e4b5e47b40b7eb15d8db17e8578b0993d73d2"
+  },
+  "new_training_or_inference": false
+}

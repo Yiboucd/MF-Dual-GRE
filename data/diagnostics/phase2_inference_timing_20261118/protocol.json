@@ -1,0 +1,52 @@
+{
+  "purpose": "Archive the existing single-example inference benchmark; not a dataset-wide timing study.",
+  "scope": "One prespecified canonical test example Davis/xml6/TX1, observation mask4101, 2% each of7bands; batch1 jointly produces all7maps.",
+  "fixed_example_selection": "Lexicographically first (city,xml_idx,tx_idx) of canonical test160, selected before timing.",
+  "gpu": "NVIDIA RTX A6000",
+  "precision": "FP32 without autocast; TF32 disabled; only intermediate coarse round trip mimics the existing FP16 cache.",
+  "measurement": {
+    "warmup_per_method": 20,
+    "repeats_per_method": 100,
+    "method_order": "Rotate three-method starting position each repetition; explicit device synchronization before/after every timed call.",
+    "clock": "time.perf_counter synchronized wall latency; no CUDA graphs/compilation/autocast.",
+    "single_example_limitation": "One fixed input is a controlled microbenchmark, not a dataset-wide latency distribution."
+  },
+  "boundaries": {
+    "mf_two_stage_preloaded": "Fresh original Stage1 forward including its dynamic anchor-neighbor calculation; clamp; GPU label-gather projection and original-cache-equivalent FP16 round trip; original Stage2 forward; original hard observation consistency.",
+    "unet_preloaded": "Concatenate device-resident raw sparse maps/masks/original side; original strong U-Net forward; clamp; original hard observation consistency.",
+    "mf_stage2_only_cached_prior": "Original Stage2 forward and hard consistency from preloaded saved coarse prior. This is explicitly NOT full two-stage runtime.",
+    "excluded_for_all": "Model/checkpoint loading, file I/O, graph/side construction, pixel-to-region sparse-feature aggregation, mask generation, host-to-device copies, target scoring, plotting.",
+    "graph_reuse": "Static graph, labels, features, side and observation tensors preloaded. Neighborhood search performed inside Stage1 forward is included."
+  },
+  "side_context": "Each system retains its actual source side/context, which differs by graph resolution; same target/sparse/masks/valid/eval hashes asserted. This is an implementation latency comparison of existing systems, not an all-inputs-identical architecture ablation.",
+  "models": {
+    "mf": {
+      "checkpoint_sha256": "0967751f9e7dc528e8a74c60bbd715b27c723c099de6d3761aed8f87ee4d9953",
+      "parameters": 4930201
+    },
+    "unet": {
+      "checkpoint_sha256": "042cb14fc9682655ab914a3d30209c95daf76c7e68eac1095c9ac5eb72d96fe7",
+      "parameters": 7768135
+    },
+    "stage1": {
+      "checkpoint_sha256": "8b6bd82c446e9fc75d2f272f90315614f6e178d6aa1da9e34618189c77fab417",
+      "parameters": 683223
+    }
+  },
+  "methods_preserved": [
+    "mf_stage2_only_cached_prior",
+    "mf_two_stage_preloaded",
+    "unet_preloaded"
+  ],
+  "source_hashes": {
+    "manifest.json": "6e60be0e31a5fda7a4f774e18f260d827ea6cd9fe5d3fb78885e725d6066ea1a",
+    "summary.json": "6524719c5168c1dc45ffa02c1a2463d98a4614fae090e461049a5eaa375bc08b",
+    "per_repeat_latency.csv": "0f8d92f35d51c61ec3833c0c78241f0a9eaaf180688b17970295f77911c67c32"
+  },
+  "files_sha256": {
+    "summary.json": "6524719c5168c1dc45ffa02c1a2463d98a4614fae090e461049a5eaa375bc08b",
+    "per_repeat_latency.csv": "966fba06d1f13d0e812d3f348b9bb1aa7c3e9aa4984f14a6defe934fcab77ccc"
+  },
+  "csv_serialization": "UTF-8 with LF line endings; all 300 original CSV records retained.",
+  "verification": "Median and mean for all three methods independently recomputed from all 100 repetitions per method."
+}
