@@ -62,14 +62,14 @@
   },
   "scope": "Two single-seed checkpoints at one requested region count. Fixed-checkpoint input interventions do not uniquely isolate encoder, self-anchor, or other anchor effects. Between-checkpoint differences cannot separate training-rate effects from fit variability.",
   "files_sha256": {
-    "summary.csv": "7cf944ef05b96c5fd3fe25f2b6c4f240f11c33b0672284c3468d4fe1c4ebe337",
-    "per_mask_cells.csv": "39cfae2e72a02627dc668929bf0553399136161a196dda83295e5b11664eb9ad",
-    "stable_groups.csv": "729e70a7a97954739ea41786ad94f328177ab369ef1408f5f95a489c5b3faefd",
-    "stable_group_summary.csv": "4d929245c921687c1ae195563b6b1aad9322531495cf8807a662145c5c01c073",
-    "stable_group_input_effects.csv": "71b60ed73a248da321160e8416d5b2a92a89a88ff2f6992560a4157754dc9e22",
-    "sampling_group_stats.csv": "035d1f28d82910f24129f81163cbafe244b308d4062af1da9d0a6bac4c5020ec",
-    "sampling_group_summary.csv": "8b1d01dcdbf9eb9a42ba783ace4821fc0df55f5fdbd35c888877c95cff614abf",
-    "diagonal_regression.csv": "ee3b5776807407fd6b04a27c6b2a2a83652bdc433a4a6458baa12836d3263ef8"
+    "summary.csv": "ee5a0d1fbf9fc379ee8791cd6a5a1c238b29f9878faeef226733fbffff7bf24c",
+    "per_mask_cells.csv": "38c3c8f6dd45b5adb9403e0b3d538eed6d95a0f0ed3ab35567deace81a69650b",
+    "stable_groups.csv": "fcec4b38507ce8a5b43c16485a8d2f23b9bfc0bea59f94a0745450ff08b423de",
+    "stable_group_summary.csv": "7772714d5ce9c2d0915cbe750b28716c111184536b1b089024baf94936171b88",
+    "stable_group_input_effects.csv": "ac4b1d355cc1593b1453fd51f738f9f1056ca50343d56b7d60acff943b0fabd1",
+    "sampling_group_stats.csv": "e2cda700c215ba7ea576e396bc9bbb32b72a716912fe6302b954074cb6fb165d",
+    "sampling_group_summary.csv": "d2d742cd17369ee63bb4009abb03a5aa3fc28af1463cf7fa4c7276d04a37a131",
+    "diagonal_regression.csv": "3cf6861c227115f7639ac1ae3181711c3458d3ee14bbf4d7668be8aa4624e579"
   },
   "reference_clip_db": [
     -120,
@@ -77,5 +77,6 @@
   ],
   "phase1_output": "One constant predicted value per region and carrier, scored at heldout pixels.",
   "maximum_per_mask_diagonal_absolute_difference_db": 1.0005491990483506e-08,
-  "verification": "Recomputed all four five-mask mean RMSEs, scoring counts, stable-group directions, the single-measurement fraction, and all pre-update versus final-score comparisons from the released CSV files."
+  "verification": "Recomputed all four five-mask mean RMSEs, scoring counts, stable-group directions, the single-measurement fraction, and all pre-update versus final-score comparisons from the released CSV files.",
+  "csv_serialization": "UTF-8 with LF line endings. CSV records are unchanged from the diagnostic artifacts."
 }
