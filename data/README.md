@@ -83,3 +83,7 @@ and source building masks are distributed in the geometry archive.
 
 See [DATA_LICENSE.md](../DATA_LICENSE.md) for ODbL licensing and
 **© OpenStreetMap contributors** attribution.
+
+The [regional RadioGAT training record](radiogat_regional_0p1_training_record.json)
+preserves the configured epoch limit and selected epoch for the archived
+0.1% regional run.

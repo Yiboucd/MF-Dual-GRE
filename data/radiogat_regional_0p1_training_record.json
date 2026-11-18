@@ -1,0 +1,15 @@
+{
+  "method": "RadioGAT (regional adaptation)",
+  "record_scope": "Archived equal-per-band 0.1% regional run",
+  "requested_regions": 3000,
+  "observation_rate_percent_per_band": 0.1,
+  "training": {
+    "epoch_limit": 40,
+    "selected_epoch": 40,
+    "selection_metric": "RMSE at the reserved measurement pixels in validation scenes"
+  },
+  "provenance": {
+    "metrics_sha256": "ce016226d65909678a568364de7e842b18e3a3772dcfa7008f20a5bee2012ead",
+    "checkpoint_sha256": "85bd1d45f298d34b4559485632a1b24065bb06696a96a4da2ff86021a6fd9dd3"
+  }
+}
