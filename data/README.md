@@ -118,3 +118,10 @@ residual output head.
 The [single-example inference benchmark](diagnostics/phase2_inference_timing_20261118)
 archives all 300 timing repetitions for the two-stage system, cached-prior
 refiner, and U-Net, together with model hashes and measurement boundaries.
+
+The [S8000 cross-frequency controls](diagnostics/crossband_controls_s8000_20261120)
+contain the completed additional-auxiliary experiment and every other completed
+arm of the original eleven-configuration queue as of November 20. The snapshot
+includes raw per-example errors, mask summaries, the original plan, and
+independent verification; the fixed-budget diagnostic is retained alongside
+the additional-measurement comparison.

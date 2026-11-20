@@ -1,0 +1,13 @@
+{
+  "mask_seed": 4103,
+  "num_examples": 120,
+  "pixel_sse_db2": 27345608.403434906,
+  "pixel_count": 1420900,
+  "holdout_pixel_rmse_db": 4.386943468795315,
+  "binding": "dc9c93f04b1447b5bfb7b1c328017f4e3beef1c4bce447ed38e6aa938784eb5b",
+  "checkpoint_sha256": "055a2bbb6a31161bb5c48c64172ab9367a7a0202549d6c101f2bdbd487beff2e",
+  "prepared_input_sha256": "1d4c23f646fa5cf4b195b7188b330a214998e7e96f264e053ca5d10c485b079b",
+  "raw_csv_sha256": "182a6c40f14544ff4e5e77f81196e32954a0811dd7e67b13fbbea13b0f4e3100",
+  "stock_evaluator_rmse_db": 4.386943472102976,
+  "stock_evaluator_absolute_difference_db": 3.307660811913138e-09
+}

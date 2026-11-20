@@ -1,0 +1,108 @@
+{
+  "status": "complete",
+  "protocol": "crossband_main_sourceaudited_sp8000_v1",
+  "binding": "013c81661a2c769b2a456819af208902d4b0ca672e63625b8dfa952e0086ce89",
+  "config": {
+    "id": "aux_t3p65_a28_r0p5_true",
+    "table": "III",
+    "target_index": 1,
+    "target_GHz": 3.65,
+    "rates_percent": [
+      0.0,
+      0.5,
+      0.0,
+      0.0,
+      0.0,
+      0.5,
+      0.0
+    ],
+    "auxiliary_mode": "true",
+    "sum_per_band_rates_percent": 1.0,
+    "overall_rate_percent": 0.14285714285714285
+  },
+  "target_only_training_supervision": true,
+  "source_split_counts": {
+    "train": 820,
+    "val": 180,
+    "test": 120
+  },
+  "evaluation_mask_seeds": [
+    4101,
+    4102,
+    4103,
+    4104,
+    4105
+  ],
+  "checkpoint_sha256": "6d1e9048a574478cc4cb983a5d35770a2012285dae6d63794b345416bf0c0fbb",
+  "mean_mask_holdout_pixel_rmse_db": 4.20313449622086,
+  "sample_std_over_masks_db": 0.00431676292237401,
+  "aggregation": "Pool raw pixel SSE/count within each mask; average the five mask RMSEs.",
+  "mask_results": [
+    {
+      "mask_seed": 4101,
+      "num_examples": 120,
+      "pixel_sse_db2": 25169744.881679416,
+      "pixel_count": 1420900,
+      "holdout_pixel_rmse_db": 4.208793806241302,
+      "binding": "013c81661a2c769b2a456819af208902d4b0ca672e63625b8dfa952e0086ce89",
+      "checkpoint_sha256": "6d1e9048a574478cc4cb983a5d35770a2012285dae6d63794b345416bf0c0fbb",
+      "prepared_input_sha256": "873f9d539fd823e228048b4ee97118d19375003bdccec3d715ece67e26afe79c",
+      "raw_csv_sha256": "0f2f788cd4f0175b0dee892a78cc26017255784dc5af46edcd2db0e6b168008f",
+      "stock_evaluator_rmse_db": 4.208793803961295,
+      "stock_evaluator_absolute_difference_db": 2.2800072940754035e-09
+    },
+    {
+      "mask_seed": 4102,
+      "num_examples": 120,
+      "pixel_sse_db2": 25052277.634854324,
+      "pixel_count": 1420900,
+      "holdout_pixel_rmse_db": 4.198961096190454,
+      "binding": "013c81661a2c769b2a456819af208902d4b0ca672e63625b8dfa952e0086ce89",
+      "checkpoint_sha256": "6d1e9048a574478cc4cb983a5d35770a2012285dae6d63794b345416bf0c0fbb",
+      "prepared_input_sha256": "043818faaec5caccc25dad2d10af4a18be039077cf22134e889894e0f7248440",
+      "raw_csv_sha256": "35cb5f767ce29c5cb86b943a26b1ace12a35d1f4a2aec39091d84446afee3c97",
+      "stock_evaluator_rmse_db": 4.198961095508815,
+      "stock_evaluator_absolute_difference_db": 6.816396336262187e-10
+    },
+    {
+      "mask_seed": 4103,
+      "num_examples": 120,
+      "pixel_sse_db2": 25140126.870403826,
+      "pixel_count": 1420900,
+      "holdout_pixel_rmse_db": 4.2063167689043395,
+      "binding": "013c81661a2c769b2a456819af208902d4b0ca672e63625b8dfa952e0086ce89",
+      "checkpoint_sha256": "6d1e9048a574478cc4cb983a5d35770a2012285dae6d63794b345416bf0c0fbb",
+      "prepared_input_sha256": "ab1702d303b651eee99730cf98e17447ad0c2859124c5c33fe2b9262fde7a9b5",
+      "raw_csv_sha256": "8cc22698d4d7091ac3579fa70d9af1f15afe32153566be497e00b82813758fe6",
+      "stock_evaluator_rmse_db": 4.206316766837045,
+      "stock_evaluator_absolute_difference_db": 2.0672947798061614e-09
+    },
+    {
+      "mask_seed": 4104,
+      "num_examples": 120,
+      "pixel_sse_db2": 25057203.589411635,
+      "pixel_count": 1420900,
+      "holdout_pixel_rmse_db": 4.199373890491958,
+      "binding": "013c81661a2c769b2a456819af208902d4b0ca672e63625b8dfa952e0086ce89",
+      "checkpoint_sha256": "6d1e9048a574478cc4cb983a5d35770a2012285dae6d63794b345416bf0c0fbb",
+      "prepared_input_sha256": "989c807aa1dbdbfa0353474abb9b8ae08107788d54259c5a52a3ba00be373bba",
+      "raw_csv_sha256": "e45dd4273dc07360cfa4e42415d6785283342b77697a6f9465be9adaad97f242",
+      "stock_evaluator_rmse_db": 4.199373890470894,
+      "stock_evaluator_absolute_difference_db": 2.106403940160817e-11
+    },
+    {
+      "mask_seed": 4105,
+      "num_examples": 120,
+      "pixel_sse_db2": 25091262.575120676,
+      "pixel_count": 1420900,
+      "holdout_pixel_rmse_db": 4.202226919276246,
+      "binding": "013c81661a2c769b2a456819af208902d4b0ca672e63625b8dfa952e0086ce89",
+      "checkpoint_sha256": "6d1e9048a574478cc4cb983a5d35770a2012285dae6d63794b345416bf0c0fbb",
+      "prepared_input_sha256": "a7638d7727b62fe6128174487cc902ba0776b293913452d6b364ad7526d17ebc",
+      "raw_csv_sha256": "6659702becd71c08660d5f1e422bf7e0c986440fe0d458d5031331ed1ac0b813",
+      "stock_evaluator_rmse_db": 4.202226919128119,
+      "stock_evaluator_absolute_difference_db": 1.4812684412390809e-10
+    }
+  ],
+  "completed_utc": "2026-11-18T15:04:00.022409+00:00"
+}

@@ -1,0 +1,294 @@
+{
+  "status": "preflight_passed_final_execution_review",
+  "server_access": "SSH restored; CPU preflight and actual GPU smoke passed for target-only and 5% shuffled-auxiliary conditions.",
+  "paper_base": "5be8df60c1639d70b0ab3a465567da0befc86e8f",
+  "model": "MFGAT frequency_joint_anchor; method unchanged",
+  "requested_superpixels": 8000,
+  "split_counts": {
+    "train": 820,
+    "validation": 180,
+    "test": 120
+  },
+  "split_requirement": "Use explicit source-audited main-experiment lists; never silently evaluate stock160.",
+  "sparse_training": "Fixed target-only hidden-query loss and target-only reserved-anchor model selection across all11 arms; auxiliary values are inputs, not extra target labels.",
+  "train_mask_seed": 3101,
+  "model_seed": 2026,
+  "evaluation_mask_seeds": [
+    4101,
+    4102,
+    4103,
+    4104,
+    4105
+  ],
+  "fixed_holdout": {
+    "rate_percent": 20,
+    "seed": 9001,
+    "same_locations_all_carriers": true
+  },
+  "metric": "Target-band holdout-pixel RMSE: pool pixel SSE/counts per mask, average five mask RMSEs.",
+  "training_recipe": {
+    "epochs_cap": 90,
+    "batch_size": 1,
+    "hidden_dim": 128,
+    "num_heads": 4,
+    "num_layers": 2,
+    "dropout": 0.05,
+    "anchor_dropout": 0.5,
+    "anchor_neighbors": 4,
+    "consistency_alpha": 0.25,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "smoothness_weight": 0,
+    "patience_evaluation_checks": 12,
+    "eval_every": 5
+  },
+  "prelaunch_gates": [
+    "Verify actual S8000 saved recipe matches proposed recipe.",
+    "Enforce audited split and donor partition membership.",
+    "Ensure same geometry and different physical TX for shuffled donors.",
+    "Resolve donor-holdout exclusion while preserving true/shuffled masks.",
+    "Confirm zero-anchor forward/backward remains finite.",
+    "Verify target masks nested across allocations and true/shuffled exactly match.",
+    "Record integer pixel budgets and bounded rounding.",
+    "Check GPU availability before allocating isolated jobs."
+  ],
+  "configurations": [
+    {
+      "id": "aux_t3p65_a28_r0_true",
+      "table": "III",
+      "target_index": 1,
+      "target_GHz": 3.65,
+      "rates_percent": [
+        0.0,
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0,
+        0.0
+      ],
+      "auxiliary_mode": "true",
+      "sum_per_band_rates_percent": 0.5,
+      "overall_rate_percent": 0.07142857142857142
+    },
+    {
+      "id": "aux_t3p65_a28_r0p5_true",
+      "table": "III",
+      "target_index": 1,
+      "target_GHz": 3.65,
+      "rates_percent": [
+        0.0,
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.5,
+        0.0
+      ],
+      "auxiliary_mode": "true",
+      "sum_per_band_rates_percent": 1.0,
+      "overall_rate_percent": 0.14285714285714285
+    },
+    {
+      "id": "aux_t3p65_a28_r0p5_shuffled",
+      "table": "III",
+      "target_index": 1,
+      "target_GHz": 3.65,
+      "rates_percent": [
+        0.0,
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.5,
+        0.0
+      ],
+      "auxiliary_mode": "shuffled",
+      "sum_per_band_rates_percent": 1.0,
+      "overall_rate_percent": 0.14285714285714285
+    },
+    {
+      "id": "aux_t3p65_a28_r5_true",
+      "table": "III",
+      "target_index": 1,
+      "target_GHz": 3.65,
+      "rates_percent": [
+        0.0,
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        5,
+        0.0
+      ],
+      "auxiliary_mode": "true",
+      "sum_per_band_rates_percent": 5.5,
+      "overall_rate_percent": 0.7857142857142857
+    },
+    {
+      "id": "aux_t3p65_a28_r5_shuffled",
+      "table": "III",
+      "target_index": 1,
+      "target_GHz": 3.65,
+      "rates_percent": [
+        0.0,
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        5,
+        0.0
+      ],
+      "auxiliary_mode": "shuffled",
+      "sum_per_band_rates_percent": 5.5,
+      "overall_rate_percent": 0.7857142857142857
+    },
+    {
+      "id": "budget_t3p65_only",
+      "table": "IV",
+      "target_index": 1,
+      "target_GHz": 3.65,
+      "rates_percent": [
+        0.0,
+        2,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "auxiliary_mode": "true",
+      "sum_per_band_rates_percent": 2.0,
+      "overall_rate_percent": 0.2857142857142857
+    },
+    {
+      "id": "budget_t3p65_seven_true",
+      "table": "IV",
+      "target_index": 1,
+      "target_GHz": 3.65,
+      "rates_percent": [
+        0.25,
+        0.5,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "auxiliary_mode": "true",
+      "sum_per_band_rates_percent": 2.0,
+      "overall_rate_percent": 0.2857142857142857
+    },
+    {
+      "id": "budget_t3p65_seven_shuffled",
+      "table": "IV",
+      "target_index": 1,
+      "target_GHz": 3.65,
+      "rates_percent": [
+        0.25,
+        0.5,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "auxiliary_mode": "shuffled",
+      "sum_per_band_rates_percent": 2.0,
+      "overall_rate_percent": 0.2857142857142857
+    },
+    {
+      "id": "budget_t28_only",
+      "table": "IV",
+      "target_index": 5,
+      "target_GHz": 28,
+      "rates_percent": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2,
+        0.0
+      ],
+      "auxiliary_mode": "true",
+      "sum_per_band_rates_percent": 2.0,
+      "overall_rate_percent": 0.2857142857142857
+    },
+    {
+      "id": "budget_t28_seven_true",
+      "table": "IV",
+      "target_index": 5,
+      "target_GHz": 28,
+      "rates_percent": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.5,
+        0.25
+      ],
+      "auxiliary_mode": "true",
+      "sum_per_band_rates_percent": 2.0,
+      "overall_rate_percent": 0.2857142857142857
+    },
+    {
+      "id": "budget_t28_seven_shuffled",
+      "table": "IV",
+      "target_index": 5,
+      "target_GHz": 28,
+      "rates_percent": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.5,
+        0.25
+      ],
+      "auxiliary_mode": "shuffled",
+      "sum_per_band_rates_percent": 2.0,
+      "overall_rate_percent": 0.2857142857142857
+    }
+  ],
+  "result_policy": "No new numbers or protocol changes inserted into tables until runs and independent aggregation checks complete.",
+  "membership_csv": {
+    "path": "data/examples.csv",
+    "sha256": "552ead3b6403f83df73a24d9813d0708357220c8d6fa1a6d0ac5902f8356a783",
+    "role_counts": {
+      "train": 820,
+      "source_disjoint_test120": 120,
+      "seen_source_new_tx_test40": 40,
+      "val": 180
+    },
+    "source_counts": {
+      "train": 40,
+      "val": 9,
+      "source_disjoint_test120": 6
+    },
+    "train_val_primary_sources_disjoint": true
+  },
+  "saved_main_recipe": {
+    "path": "data/model_config_phase1_2pct.json",
+    "sha256": "a3de7c38d035af05e171ee003a02df562d7a49bf3553cae575108cc2128a0b16"
+  },
+  "historical_training_time": {
+    "training_seconds_90_epochs": 25444.98,
+    "note": "Historical S8000 training-only time; excludes validation/loading; not a current completion estimate."
+  },
+  "training_recipe_verified_against_saved_main_config": true,
+  "metric_expected_scored_pixels_per_target_per_mask": 1420900,
+  "auxiliary_sampling_policy": "True and shuffled arms share auxiliary masks drawn from the common non-holdout cells of recipient and its fixed same-source/different-TX donor. Target masks retain the original recipient-only exclusion. This avoids reading donor holdout labels; it is a tighter control and does not claim exact original all-band observation streams.",
+  "resource_policy": {
+    "physical_gpu_index": 1,
+    "gpu_uuid": "GPU-80d61202-c85a-0529-0021-cf7be716d5b8",
+    "workers": 1,
+    "gpu_memory_cap_gib": 16,
+    "minimum_free_mib_before_worker": 20480,
+    "cpu_threads": 4,
+    "unix_nice": 10,
+    "other_jobs": "No existing process is stopped or modified.",
+    "memory_preflight": "8 GiB process cap was insufficient for full S8000 backward; 16 GiB cap passed, with 9.42GB allocated /13.42GB reserved peak in tested examples. No existing process modified."
+  }
+}

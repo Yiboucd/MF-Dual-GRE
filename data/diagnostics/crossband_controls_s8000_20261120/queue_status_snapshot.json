@@ -1,0 +1,80 @@
+{
+  "status": "running",
+  "started_utc": "2026-11-18T04:57:37.113848+00:00",
+  "pid": 915919,
+  "gpu_uuid": "GPU-80d61202-c85a-0529-0021-cf7be716d5b8",
+  "gpu_memory_cap_gib": 16.0,
+  "plan": "/home/yibo/vcode/data/isolated_sweeps/mfdualgre_crossband_main_20261118_01/execution_package/experiment_plan.json",
+  "configurations": [
+    {
+      "id": "aux_t3p65_a28_r0_true",
+      "state": "completed",
+      "started_utc": "2026-11-18T04:57:37.151972+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-18T09:58:32.933179+00:00",
+      "log": "/home/yibo/vcode/data/isolated_sweeps/mfdualgre_crossband_main_20261118_01/outputs/aux_t3p65_a28_r0_true.worker.log"
+    },
+    {
+      "id": "aux_t3p65_a28_r0p5_true",
+      "state": "completed",
+      "started_utc": "2026-11-18T09:58:32.973434+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-18T15:04:01.595186+00:00",
+      "log": "/home/yibo/vcode/data/isolated_sweeps/mfdualgre_crossband_main_20261118_01/outputs/aux_t3p65_a28_r0p5_true.worker.log"
+    },
+    {
+      "id": "aux_t3p65_a28_r0p5_shuffled",
+      "state": "completed",
+      "started_utc": "2026-11-18T15:04:01.639417+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-18T19:28:32.230252+00:00",
+      "log": "/home/yibo/vcode/data/isolated_sweeps/mfdualgre_crossband_main_20261118_01/outputs/aux_t3p65_a28_r0p5_shuffled.worker.log"
+    },
+    {
+      "id": "aux_t3p65_a28_r5_true",
+      "state": "completed",
+      "started_utc": "2026-11-18T19:28:32.265385+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-18T23:42:57.144659+00:00",
+      "log": "/home/yibo/vcode/data/isolated_sweeps/mfdualgre_crossband_main_20261118_01/outputs/aux_t3p65_a28_r5_true.worker.log"
+    },
+    {
+      "id": "aux_t3p65_a28_r5_shuffled",
+      "state": "completed",
+      "started_utc": "2026-11-18T23:42:57.185236+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-19T04:22:49.122672+00:00",
+      "log": "/home/yibo/vcode/data/isolated_sweeps/mfdualgre_crossband_main_20261118_01/outputs/aux_t3p65_a28_r5_shuffled.worker.log"
+    },
+    {
+      "id": "budget_t3p65_only",
+      "state": "completed",
+      "started_utc": "2026-11-19T04:22:49.162413+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-19T10:28:21.680269+00:00",
+      "log": "/home/yibo/vcode/data/isolated_sweeps/mfdualgre_crossband_main_20261118_01/outputs/budget_t3p65_only.worker.log"
+    },
+    {
+      "id": "budget_t3p65_seven_true",
+      "state": "completed",
+      "started_utc": "2026-11-19T10:28:21.724010+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-19T16:36:14.081511+00:00",
+      "log": "/home/yibo/vcode/data/isolated_sweeps/mfdualgre_crossband_main_20261118_01/outputs/budget_t3p65_seven_true.worker.log"
+    },
+    {
+      "id": "budget_t3p65_seven_shuffled",
+      "state": "completed",
+      "started_utc": "2026-11-19T16:36:14.122148+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-19T21:00:35.137122+00:00",
+      "log": "/home/yibo/vcode/data/isolated_sweeps/mfdualgre_crossband_main_20261118_01/outputs/budget_t3p65_seven_shuffled.worker.log"
+    },
+    {
+      "id": "budget_t28_only",
+      "state": "running",
+      "last_memory_check_utc": "2026-11-19T22:05:15.888160+00:00",
+      "started_utc": "2026-11-19T22:06:00.935336+00:00"
+    }
+  ]
+}
